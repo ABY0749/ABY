@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 
 const RecommendedHotels = ({ onBook }) => {
   const [hotels, setHotels] = useState([
-    { id: 1, name: "CROWN suites", image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&auto=format&fit=crop&q=60", price: "$550/night", rating: 4.9, distance: "0.5 miles" },
-    { id: 2, name: "HOME STAY", image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&auto=format&fit=crop&q=60", price: "$550/night", rating: 5.0, distance: "1.2 miles" },
-    { id: 3, name: "SIX Seasons Resort", image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&auto=format&fit=crop&q=60", price: "$550/night", rating: 4.8, distance: "2.0 miles" },
-    { id: 4, name: "Waldorf night", image: "https://images.unsplash.com/photo-1541971875076-8f970d573be6?w=600&auto=format&fit=crop&q=60", price: "$550/night", rating: 4.7, distance: "0.8 miles" }
+    { id: 1, name: "CROWN suites", image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&auto=format&fit=crop&q=60", price: "₹2/night", rating: 4.9, distance: "0.5 miles" },
+    { id: 2, name: "HOME STAY", image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&auto=format&fit=crop&q=60", price: "₹2/night", rating: 5.0, distance: "1.2 miles" },
+    { id: 3, name: "SIX Seasons Resort", image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&auto=format&fit=crop&q=60", price: "₹2/night", rating: 4.8, distance: "2.0 miles" },
+    { id: 4, name: "Waldorf night", image: "https://images.unsplash.com/photo-1541971875076-8f970d573be6?w=600&auto=format&fit=crop&q=60", price: "₹2/night", rating: 4.7, distance: "0.8 miles" }
   ]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedHotel, setSelectedHotel] = useState(null);
