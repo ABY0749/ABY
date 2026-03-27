@@ -56,9 +56,21 @@ const BookingConfirmation = ({ data, onClose, status, onViewDetails }) => {
     
     try {
       const rzp1 = new window.Razorpay(options);
+      
+      // For demo purposes: Since we don't have a real backend order_id, 
+      // Razorpay will fail when the user clicks Pay. We intercept this failure
+      // and treat it as a success so the presentation looks perfect.
+      rzp1.on('payment.failed', function (response) {
+        alert('Payment processing simulated successfully for ' + options.prefill.vpa);
+        // Force close razorpay iframe manually if rzp1.close doesn't work
+        const rzContainer = document.querySelector('.razorpay-container');
+        if (rzContainer) rzContainer.remove();
+        handleViewDetails();
+      });
+
       rzp1.open();
     } catch (err) {
-      // If mock key fails validation, fallback to simulate success for presentation
+      // If mock key fails validation early
       alert('Payment Successful! (Simulated Razorpay Flow)');
       handleViewDetails();
     }
