@@ -82,7 +82,7 @@ const BookingConfirmation = ({ data, onClose, status, onViewDetails }) => {
             <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>Use any UPI App to pay <strong>₹{totalAmount}</strong></p>
             
             <div style={{ background: 'white', padding: '1rem', borderRadius: '12px', display: 'inline-block', marginBottom: '1rem', border: '5px solid var(--primary)' }}>
-              <img src="/payment_qr.jpg" alt="UPI QR Code" style={{ width: '220px', height: '220px', display: 'block' }} />
+              <img src={`https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi://pay?pa=7702610149@ybl%26pn=ABY%20Hotels%26am=${totalAmount}%26cu=INR`} alt="UPI QR Code" style={{ width: '220px', height: '220px', display: 'block' }} />
             </div>
             
             <p style={{ color: 'var(--primary)', fontWeight: 'bold', marginBottom: '2rem', fontSize: '1.1rem' }}>Kotak Mahindra Bank - 3133</p>
