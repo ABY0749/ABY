@@ -48,7 +48,8 @@ const BookingConfirmation = ({ data, onClose, status, onViewDetails }) => {
       prefill: {
         name: data?.name || 'Guest',
         email: 'guest@example.com',
-        contact: '9999999999'
+        contact: '7702610149',
+        vpa: '7702610149@ybl'
       },
       theme: { color: '#3b82f6' }
     };
